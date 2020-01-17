@@ -2,29 +2,27 @@ package game.main;
 
 import java.util.Scanner;
 
-/*
- * @description: this is a helper class with some functionality for user interaction
- * @author: Benjamin Komen
+/**
+ * Some helper functionality for user interaction.
  */
 public class Helper {
-	// Create a Scanner object, to get keyboard input.
-	private static Scanner scanner = new Scanner(System.in);
 
-	// Get a String from the user.
-	public static String getString(String promptMsg) {
-		System.out.printf("%s", promptMsg);
-		return scanner.next();
-	}
+    private Helper() {
+        // intentionally private, this class has only static members
+    }
 
-	// Get a double from the user.
-	public static double getDouble(String promptMsg) {
-		System.out.printf("%s", promptMsg);
-		return scanner.nextDouble();
-	}
+    // Create a Scanner object, to get keyboard input.
+    private static Scanner scanner = new Scanner(System.in);
 
-	// Get an int from the user.
-	public static int getInt(String promptMsg) {
-		System.out.printf("%s", promptMsg);
-		return scanner.nextInt();
-	}
+    // Get a String from the user.
+    public static String getString(String promptMsg) {
+        System.out.printf("%s", promptMsg);
+        return scanner.next();
+    }
+
+    // Get an int from the user.
+    public static int getInt(String promptMsg) {
+        System.out.printf("%s", promptMsg);
+        return scanner.nextInt();
+    }
 }
